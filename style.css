@@ -1,0 +1,308 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Instrument Sans', sans-serif;
+    background-color: #fdfdf6;
+    color: #222;
+}
+
+/* Nav Bar */
+.navbar {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    height: 75px;
+    width: 100%;
+    background-color: #e6e6e081;
+
+    border-bottom: 1px solid #e5e5e5;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+    
+}
+
+.logo {
+    color: #222;
+    font-size: 30px;
+    font-weight: 400;
+    font-family: "Instrument Serif", serif;
+    padding-left: 30px;
+    text-shadow: 2px 2px 5px #a4a3a3;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+    margin-left: auto;
+    padding-right: 25px;
+    font-size: 16px;
+}
+.nav-links a {
+    color: #222;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.nav-links a:hover {
+    color: #777;
+}
+
+
+h1 {
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+}
+
+.about-me {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+hr {
+    border: 0.5px solid #e5e5e5;
+}
+
+.pic-desc {
+    display: flex;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 50px;
+    padding: 1rem;
+    font-size: 18px;
+    padding-bottom: 100px;
+}
+
+.avy-pic {
+    border: 1px solid #e5e5e5;
+}
+
+@font-face {
+  font-family: 'Sacramento';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/sacramento@5.2.8/latin-400-normal.woff2) format('woff2');
+}
+
+.projects-btn {
+    background-color: #e6e6e0;
+    padding: 1rem;
+    font-size: 15px;
+    border: 1px solid #e5e5e5;
+    text-decoration: none;
+    display: inline-block;
+    color: #222;
+
+}
+
+.nav-links a {
+    color: #222;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.projects-btn:hover {
+    color: #777;
+}
+
+
+
+
+
+
+
+/* Animated Text */
+.animated-gradient-name {
+    margin-top: 200px;
+    margin-bottom: 200px;
+    font-family: "Sacramento", cursive;
+    font-weight: 500;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+
+    background: linear-gradient(
+        90deg, 
+        #222, 
+        #777777, 
+        #bbbbbb, 
+        #222
+    );
+  
+    /* 2. Make the background oversized so there is room to slide it */
+    background-size: 300% 100%;
+  
+    /* 3. Clip the background so it only renders inside the text shapes */
+    -webkit-background-clip: text;
+    background-clip: text;
+    
+    /* 4. Make the original text fill transparent so the background shows through */
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    
+    /* 5. Apply the continuous animation */
+    animation: sweep 8s linear infinite;
+}
+
+/* 6. Move the background x-position from left to right */
+@keyframes sweep {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 300% 50%;
+  }
+}
+
+
+
+
+
+
+
+
+/* Mobile Menu */
+.menu-button {
+    display: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    width: 35px;
+    height: 25px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-button span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #222;
+    border-radius: 3px;
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        height:65px;
+    }
+    .nav-container {
+        padding: 0 20px;
+    }
+    /*Hide Desktop Nav Bar*/
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background-color: #fdfdf6;
+        flex-direction: column;
+        gap: 0;
+        padding-right: 0;
+    }
+    .nav-links.active {
+        display:flex;
+    }
+    .nav-links a {
+        padding: 20px;
+        border-top: 1px solid #e5e5e5;
+        text-align: center;
+    }
+    .menu-button {
+        display: flex;
+        margin-left: auto;
+        margin-right: 20px;
+    }
+
+    .logo {
+        padding-left: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* PROJECTS PAGE */
+.projects {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 100px 30px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    width: 100%;
+}
+
+.project-card {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.project-cover {
+    position: relative;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    width: 100%;
+}
+
+.project-cover > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    padding: 25px;
+    background: rgba(0,0,0,0.75);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-cover:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-cover:hover > img {
+    transform: scale(1.03);
+}
+
+.project-overlay h2 {
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+
+.project-date {
+    margin-bottom: 15px;
+    font-size: 14px;
+    opacity: 0.75;
+}
+
+.project-overlay p{
+    line-height: 1.5;
+}
