@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
     <link href="https://googleapis.com" rel="stylesheet">
     <title>Avy Drew Portfolio</title>
     <link rel="stylesheet" href="style.css">
@@ -16,7 +17,7 @@
     <header class="navbar">
         <!--NavigationBar-->
         <nav class="nav-container">
-            <span class="logo">AD</span>
+            <span class="logo"><img src="images/ad.png"></span>
             <div class="nav-links">
                 <a href="index.html">About</a>
                 <a href="projects.html">Projects</a>
@@ -31,16 +32,20 @@
             </button>
         </nav>
     </header>
-    <section>
-        <h1 class="animated-gradient-name">
+    <div class="header">
+        <div class="text-bg">
+            <h1 class="animated-gradient-name">
             Avy Drew
-        </h1>
-        <hr>
-    </section>
+            </h1>
+        </div>
+    </div>
     <h1 class="about-me">About Me</h1>
     <br> <br>
     <div class="pic-desc">
-        <img src="images/avy_pic.jpg" alt="picture of avy drew" height="300px" class="avy-pic">
+        <div class="me-pic">
+            <div class="parallax-image">
+            </div>
+        </div>
         <div class="text-content">
             <p>I am an Interior Design student at Rochester Institute of Technology.
                 I am based in Philadelphia, PA and grew up in an artistic family.
@@ -52,8 +57,43 @@
         </div>
     </div>
     <hr>
-
-
+    <h1 class="about-me">Project Highlights</h1>
+    <section class="projects"> 
+        <div class="project-grid"> 
+            <!-- Project 1 --> 
+            <a href="pdfs/boat-store.pdf" class="project-card" target="_blank"> 
+                <div class="project-cover"> 
+                    <img src="images/boat.png" alt="Boat Store Project"> 
+                    <div class="project-overlay"> 
+                        <div> 
+                            <h2>Boat Shop - Drexel Summer Program</h2> 
+                            <p class="project-date">Summer 2025</p> 
+                            <p> Made materials board, color collage, parti sketches, 3D hand-cut parti, sketchup model (then rendered by enscape), and a 3D laser cut model. This project was called Schuylkill Paddles. </p> 
+                        </div> 
+                    </div> 
+                </div> 
+            </a>
+            <!-- Project 3 --> 
+            <a href="pdfs/live-work.pdf" class="project-card" target="_blank"> 
+                <div class="project-cover"> 
+                    <img src="images/live-work.png" alt="3D Rendering of Living Room and Kitchen"> 
+                    <div class="project-overlay"> 
+                        <div> 
+                            <h2>Live-Work Unit</h2> 
+                            <p class="project-date">Spring 2026</p> 
+                            <p> Description </p> 
+                        </div> 
+                    </div> 
+                </div> 
+            </a>
+        </div>
+    </section>
+    <footer>
+        <br>
+        <br>
+        <br>
+        <p>Copyright Avy Drew</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 
