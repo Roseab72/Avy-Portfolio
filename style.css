@@ -330,6 +330,11 @@ footer {
     .logo {
         padding-left: 0;
     }
+
+    .text-content1, .text-content2 {
+        font-size: 17px;
+        width: 85%;
+    }
 }
 
 
