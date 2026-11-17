@@ -125,6 +125,7 @@ hr {
     gap: 50px;
     min-height: 500px;
     box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.12);
 }
 
 .me-pic {
@@ -648,11 +649,11 @@ footer {
 
 .writing-description {
     background-color: #bcc7ca;
-    border: 1px solid #afbabd;
     margin-top: 35px;
     padding: 25px 30px;
     box-sizing: border-box;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.12);
+    border: 1px solid #afbabd;
 }
 
 .writing-description p {
