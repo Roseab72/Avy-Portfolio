@@ -155,6 +155,10 @@ hr {
     font-size: 18px;
 }
 
+.quote {
+    font-weight: 600;
+}
+
 
 .projects-btn {
     align-self: flex-start;
@@ -202,6 +206,7 @@ footer {
 
 .linkedin {
     text-decoration: none;
+    color: #222;
 }
 
 
@@ -397,4 +402,145 @@ footer {
 
 .project-overlay p{
     line-height: 1.5;
+}
+
+
+
+
+/* CONTACT PAGE */
+
+.contact-page {
+    min-height: 750px;
+    padding: 170px 20px 100px;
+    box-sizing: border-box;
+}
+
+.contact-section {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.contact-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.contact-heading h1 {
+    font-family: "Cormorant", serif;
+    font-size: 55px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.contact-title {
+    text-align: center;
+    font-family: "Cormorant", serif;
+    font-size: 55px;
+    font-weight: 700;
+}
+
+.contact-heading p {
+    font-size: 19px;
+    color: #555;
+}
+
+/* Form layout */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.name-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group label {
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+
+    font-family: "Cormorant", serif;
+    font-size: 18px;
+    color: #222;
+
+    background-color: #fdfdf6;
+    border: 1px solid #afbabd;
+    border-radius: 0;
+    outline: none;
+
+    transition: border-color 0.3s ease,
+                background-color 0.3s ease;
+}
+
+.form-group input {
+    height: 55px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #656f72;
+    background-color: #fff;
+}
+
+/* Submit button */
+
+.submit-btn {
+    align-self: flex-start;
+    padding: 15px 30px;
+    margin-top: 10px;
+
+    font-family: "Cormorant", serif;
+    font-size: 18px;
+    font-weight: 600;
+
+    color: #222;
+    background-color: #bcc7ca;
+    border: 1px solid #afbabd;
+
+    cursor: pointer;
+    transition: background-color 0.3s ease,
+                color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #222;
+    color: #fdfdf6;
+}
+
+/* Mobile layout */
+
+@media (max-width: 700px) {
+    .contact-page {
+        padding: 130px 25px 70px;
+    }
+
+    .contact-heading h1 {
+        font-size: 42px;
+    }
+
+    .name-fields {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
 }
