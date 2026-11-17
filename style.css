@@ -2,7 +2,9 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    font-family: 'Instrument Sans', sans-serif;
+    font-family: "Cormorant", serif;
+    font-weight: 300;
+    font-style: normal;
     background-color: #fdfdf6;
     color: #222;
     margin: 0;
@@ -19,6 +21,7 @@ body {
     background-color: #e6e6e0ae;
     border-bottom: 1px solid #e5e5e5;
     z-index: 1000;
+    
 }
 
 .nav-container {
@@ -30,7 +33,8 @@ body {
 
 .logo {
     color: #222;
-    padding-left: 40px;
+    padding-left: 30px;
+    padding-top: 10px;
     text-shadow: 2px 2px 5px #a4a3a3;
 }
 
@@ -46,7 +50,7 @@ body {
     gap: 45px;
     margin-left: auto;
     padding-right: 80px;
-    font-size: 16px;
+    font-size: 20px;
 }
 .nav-links a {
     color: #222;
@@ -54,7 +58,7 @@ body {
     transition: color 0.2s ease;
 }
 .nav-links a:hover {
-    color: #777;
+    color: #656565;
 }
 
 .header {
@@ -96,6 +100,9 @@ hr {
 
 .about {
     border: 0.5px solid #afbabd;
+    margin-left: 20px;
+    margin-right: 20px;
+
 }
 
 .top {
@@ -108,6 +115,8 @@ hr {
 
 .about-sec {
     background-color: #bcc7ca;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .pic-desc {
@@ -132,7 +141,7 @@ hr {
     left: 0;
     width: 100%;
     height: 130%;
-    background-image: url("images/avy_pic.jpg");
+    background-image: url("images/headshot.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -142,20 +151,22 @@ hr {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    padding-right: 50px;
+    width: 75%;
+    font-size: 18px;
 }
 
 
 .projects-btn {
     align-self: flex-start;
-    background-color: #e6e6e0;
+    background-color: #e6e6e0ae;
     padding: 1rem;
-    margin-top: 10px;
+    margin-top: 20px;
     font-size: 15px;
-    border: 1px solid #e5e5e5;
+    border: 1px solid #e5e5e56e;
     text-decoration: none;
     display: inline-block;
     color: #222;
+    font-weight: 600;
 }
 
 .nav-links a {
@@ -165,14 +176,33 @@ hr {
 }
 
 .projects-btn:hover {
-    color: #777;
+    background-color: #222;
+    color: #e6e6e0ed;
+    transition: color 2.0 ease;
 }
 
  /* #projs-index {
     background-color: #bcc7ca;
     border: 0.5px solid #afbabd
 }
+*/
 
+footer {
+    display: flex;
+    flex-direction: column;
+    min-height: 320px;
+    background-color: #bcc7ca;
+    align-items: center;
+    border: 0.5px solid #afbabd;
+}
+
+.copyright {
+    margin-top: auto;
+}
+
+.linkedin {
+    text-decoration: none;
+}
 
 
 
@@ -181,6 +211,9 @@ hr {
 /* Animated Text */
 
  .animated-gradient-name {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
     margin-top: 300px;
     margin-bottom: 200px;
     font-family: "Cinzel Decorative", serif;
@@ -195,45 +228,32 @@ hr {
     backdrop-filter: blur(3px);
     border: 1px solid #e5e5e56e;
     text-shadow: 2px 2px 5px #a4a3a3;
-}
-/*
-    background: linear-gradient(
-        90deg, 
-        #222, 
-        #777777, 
-        #bbbbbb, 
-        #222
-    );
-    */
-    /* 2. Make the background oversized so there is room to slide it */
-    /*
-    background-size: 300% 100%;
-    /* 3. Clip the background so it only renders inside the text shapes */
-    /*
-    -webkit-background-clip: text;
-    background-clip: text;
-    
-    /* 4. Make the original text fill transparent so the background shows through */
-    /*
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-    
-    /* 5. Apply the continuous animation */
-    /*
-    animation: sweep 8s linear infinite;
-} 
 
-/* 6. Move the background x-position from left to right */
-/*
-@keyframes sweep {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 300% 50%;
-  }
+    background-image: linear-gradient(
+        110deg,
+        transparent 40%,
+        rgba(255, 255, 255, 0.55) 50%,
+        transparent 60%
+    );
+    background-size: 250% 100%;
+    background-position: 100% 0;
+    animation: lightSweep 6s ease-in-out infinite;
 }
-*/
+
+@keyframes lightSweep {
+    0% {
+        background-position: 100% 0;
+    }
+
+    30% {
+        background-position: 0% 0;
+    }
+
+    100% {
+        background-position: 0% 0;
+    }
+}
+
 
 
 
