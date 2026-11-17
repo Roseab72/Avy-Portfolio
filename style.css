@@ -123,26 +123,29 @@ hr {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
-    height: 500px;
+    min-height: 500px;
     box-sizing: border-box;
 }
 
 .me-pic {
     position: relative;
+    min-height: 700px;
     height: 100%;
+    align-self: stretch;
     overflow: hidden;
     border-right: 1px solid #e5e5e5;
     box-sizing: border-box;
+    padding: 0;
 }
 
 .parallax-image {
     position: absolute;
-    top: -25%;
+    top: 0;
     left: 0;
     width: 100%;
-    height: 130%;
+    height: 100%;
     background-image: url("images/headshot.jpg");
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -152,11 +155,13 @@ hr {
     flex-direction: column;
     box-sizing: border-box;
     width: 75%;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .quote {
+    padding-left: 30px;
     font-weight: 600;
+    font-size: 18px;
 }
 
 
@@ -165,7 +170,8 @@ hr {
     background-color: #e6e6e0ae;
     padding: 1rem;
     margin-top: 20px;
-    font-size: 15px;
+    margin-bottom: 20px;
+    font-size: 18px;
     border: 1px solid #e5e5e56e;
     text-decoration: none;
     display: inline-block;
@@ -542,5 +548,164 @@ footer {
     .name-fields {
         grid-template-columns: 1fr;
         gap: 25px;
+    }
+}
+
+
+
+
+/* ABOUT PAGE */
+
+#about {
+    scroll-margin-top: 110px;
+}
+
+
+/* CREATIVE WRITING SECTION */
+
+.creative-writing {
+    margin: 50px 20px;
+    padding: 20px 30px 40px;
+    box-sizing: border-box;
+}
+
+.creative-title {
+    font-family: "Cormorant", serif;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+
+/* WRITING CARDS */
+
+.writing-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    width: 100%;
+}
+
+.writing-card {
+    display: block;
+    text-decoration: none;
+    color: #222;
+}
+
+.writing-cover {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    border: 1px solid #afbabd;
+    box-sizing: border-box;
+}
+
+.writing-cover img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.writing-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    box-sizing: border-box;
+
+    background: rgba(34, 34, 34, 0.7);
+    color: #fdfdf6;
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.writing-overlay h3 {
+    font-family: "Cormorant", serif;
+    font-size: 25px;
+    margin: 0 0 5px;
+}
+
+.writing-overlay p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.writing-card:hover .writing-overlay {
+    opacity: 1;
+}
+
+.writing-card:hover img {
+    transform: scale(1.04);
+}
+
+
+/* WRITING DESCRIPTION BOX */
+
+.writing-description {
+    background-color: #bcc7ca;
+    border: 1px solid #afbabd;
+    margin-top: 35px;
+    padding: 25px 30px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.12);
+}
+
+.writing-description p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+/* MOBILE LAYOUT */
+
+@media (max-width: 900px) {
+    .writing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .creative-writing {
+        padding: 15px 10px 30px;
+        margin: 30px 20px;
+    }
+
+    .creative-title {
+        font-size: 34px;
+    }
+
+    .writing-grid {
+        gap: 15px;
+    }
+
+    .writing-overlay {
+        opacity: 1;
+        padding: 12px;
+        background: linear-gradient(
+            transparent 40%,
+            rgba(34, 34, 34, 0.75)
+        );
+    }
+
+    .writing-overlay h3 {
+        font-size: 19px;
+    }
+
+    .writing-overlay p {
+        font-size: 14px;
+    }
+
+    .writing-description {
+        padding: 20px;
+    }
+
+    .writing-description p {
+        font-size: 18px;
     }
 }

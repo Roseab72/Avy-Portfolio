@@ -7,5 +7,8 @@ menuButton.addEventListener("click", () => {
 
 window.addEventListener("scroll", () => {
     const scrollPosition = window.scrollY;
-    image.style.transform = `translateY(${scrollPosition * 0.15}px)`;
+    const sectionPosition = image.parentElement.getBoundingClientRect().top + scrollPosition;
+    const offset = (scrollPosition - sectionPosition) * 0.15;
+
+    image.style.transform = `translateY(${offset}px)`;
 });
