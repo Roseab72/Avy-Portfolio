@@ -684,6 +684,13 @@ footer {
     color: #0a4a5b;
 }
 
+.collage {
+    display: block;
+    margin: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.12);
+    border: 0.5px solid #afbabd8c;
+}
+
 /*.moving-text {
     font-family: "Cormorant", serif;
     font-weight: 700;
