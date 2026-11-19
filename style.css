@@ -162,7 +162,7 @@ hr {
 
 .quote {
     padding-left: 30px;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 18px;
 }
 
@@ -668,6 +668,41 @@ footer {
     margin: 0;
 }
 
+.text-container {
+    width: 100vw;
+    overflow: hidden;
+    padding: 15px 0;
+}
+
+.moving-text {
+    font-family: "Cormorant", serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 17px;
+    padding-left: 20px;
+    margin-top: -20px;
+    color: #0a4a5b;
+}
+
+/*.moving-text {
+    font-family: "Cormorant", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    display: inline-block;
+    white-space: nowrap;
+    animation: moveLeftToRight 25s linear infinite;
+}
+
+@keyframes moveLeftToRight {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100vw);
+    }
+}
+*/
 
 /* MOBILE LAYOUT */
 
